@@ -1,0 +1,28 @@
+### Create New Product
+POST localhost:3000/products
+Content-Type: application/json
+
+{
+  "title": "test",
+  "description": "test",
+  "price": 1
+}
+
+> {% client.global.set('id', response.body.id) %}
+
+### Get All Products
+GET localhost:3000/products
+
+### Get Product By Id
+GET localhost:3000/products/{{id}}
+
+### Update Product By Id
+PATCH localhost:3000/products/{{id}}
+Content-Type: application/json
+
+{
+  "title": "hore"
+}
+
+### Delete Product By Id
+DELETE localhost:3000/products/{{id}}
